@@ -10,8 +10,11 @@ typedef enum
     ERR_INVALIDCHARACTER =  3,
     ERR_LEADINGZERO =       4,
     ERR_BADLENGTH =         5,
-    ERR_ARGOVERFLOW =       6,
-    ERR_BADOCTET =          7
+    ERR_BADARGCOUNT =       6,
+    ERR_BADOCTET =          7,
+    ERR_BADPORTRANGE =      8,
+    ERR_INVALIDPORTCHAR =   9,
+    ERR_NOPORTDIGITS =      10
 }cli_error_t;
 
 #endif

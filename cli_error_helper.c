@@ -30,7 +30,7 @@ int cli_error_helper(cli_error_t err)
         printf("There is too many or too few octets in the argument make sure your IP is in format A.B.C.D\n");
         return 5;
         
-    case ERR_ARGOVERFLOW:
+    case ERR_BADARGCOUNT:
         printf("There are too many or too few arguments in the input. Make sure the only arguments are program name and IP\n");
         return 6;
         
@@ -38,9 +38,19 @@ int cli_error_helper(cli_error_t err)
         printf("One or more of your octets are an invalid form. Make sure octets are 1 through 3 numbers per octet\n");
         return 7;
         
+    case ERR_BADPORTRANGE:
+        printf("One or more of your port range inputs is out of bounds. Supports scanning 1 <= start range <= end <= 65335 ");
+        return 8;
+
+    case ERR_INVALIDPORTCHAR:
+        printf("There is an invalid character in your port range input. Make sure to only use 0-9");
+        return 9;
+    case ERR_NOPORTDIGITS:
+        printf("There was an input of arguments, but they don't contain any digits");
+        return 10;
     default:
         printf("An unexpected error has occurred. Exiting program\n");
-        return 9;
+        return 99;
         
     }
     return 9; //Another unexpected error has occured
