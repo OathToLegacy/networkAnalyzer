@@ -6,7 +6,9 @@ typedef enum
     STATUS_OPEN = 0,
     STATUS_CLOSED = 1,
     STATUS_TIMEOUT = 2,
-    STATUS_ERR = 3
+    STATUS_ERR = 3,
+    STATUS_SOCKET_CREATION_FAILED = 4,
+    STATUS_SOCKET_CREATION_SUCCES = 5
 }port_status_t;
 
 #endif
