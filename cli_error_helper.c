@@ -2,9 +2,9 @@
 #include "cli_error_helper.h"
 #include <stdio.h>
 
-int cli_error_helper(cli_error_t err)
+int cli_error_helper(cli_error_t status)
 {
-    switch (err)
+    switch (status)
     {
     case ERR_OK:
         
